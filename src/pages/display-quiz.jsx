@@ -296,7 +296,7 @@ const displayquiz = () => {
           </div>
         </div>
         {
-          index<length-2?
+          index<length-1?
           <input onClick={Next} type="button" value="Next" className='bg-green-500 text-white rounded p-2 w-full text-lg grid'/>:
           <input onClick={calculateScore} type="button" value="Finish" className='bg-green-500 text-white rounded p-2 w-full text-lg grid'/>
         
