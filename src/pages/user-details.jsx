@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContext } from 'react';
 import User from "../context/context";
-
-
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 const userdetails = () => {
   const values = useContext(User);
   return (
@@ -14,6 +14,7 @@ const userdetails = () => {
             <div className='flex flex-col gap-3'><div className='font-bold'>Player RollNo </div><div>{values.currentUser.rollno}</div></div>
             <div className='flex flex-col gap-3'><div className='font-bold'>Score Out Of {30} </div><div>{values.currentUser.score}</div></div> 
         </div>
+          <div className='font-semibold whitespace-nowrap flex'><Link to="/leaderboard" className='flex items-center hover:bg-green-500 hover:text-white rounded p-2'>LeaderBoard<ArrowRight/></Link></div>
       </div>
     </div>
   )

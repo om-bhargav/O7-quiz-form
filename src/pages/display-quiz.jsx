@@ -263,7 +263,7 @@ const displayquiz = () => {
           correct++;
         }
     }
-    values.setUsers(...values.users,{...values.currentUser,score:correct})
+    values.setUsers([...values.users,{...values.currentUser,score:correct}]);
     values.setCurrentUser({...values.currentUser,score:correct})
     
     navigate("/score");
